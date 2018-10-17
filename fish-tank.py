@@ -82,7 +82,12 @@ def draw_fish(stdscr):
             fishCoordinates[i][1] = 1
         elif fishCoordinates[i][1] > curses.LINES - 4:
             fishCoordinates[i][1] = curses.LINES - 4
-        stdscr.addstr(fishCoordinates[i][1], fishCoordinates[i][0], '0')
+        # If x is -1, the fish went to the left, else it went to the right
+        if x == -1:
+            stdscr.addstr(fishCoordinates[i][1], fishCoordinates[i][0], '0<')
+        else:
+            stdscr.addstr(fishCoordinates[i][1], fishCoordinates[i][0], '>0')
+
 
 def init_arrays():
     # Initialize kelp position and height and randomize fish position
