@@ -9,4 +9,4 @@ Just a little fish tank to watch when you're taking a small break.
 - [ ] Add the ability to drop 'food' at the surface, causing the fish to swim up to it.
 - [ ] Make the fish movement more believable.
 
-![](fish-tank.gif)
+![](images/fish-tank.gif)
