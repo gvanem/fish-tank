@@ -1,6 +1,7 @@
 import curses
 import random
 import time
+import sys
 from curses import wrapper
 
 bubbleCoordinates = [[0 for x in range(2)] for y in range(10)]
@@ -33,8 +34,9 @@ def main(stdscr):
     
 def init_curses_color(stdscr):
     curses.use_default_colors()
-    for i in range(0, curses.COLORS):
-        curses.init_pair(i, i, -1)
+    if sys.platform != 'win32':
+        for i in range(0, curses.COLORS):
+            curses.init_pair(i, i, -1)
 
 def draw_fish_tank(stdscr):
     # Draw left and right side
